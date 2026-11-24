@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facturació que es fa sola — SolutionPartner.AI</title>
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+:root{--bg:#0b1d32;--bg2:#14243a;--bg3:#1b2e4d;--ink:#14243a;--gold:#e7c47d;--line:#c9d4e0;--red:#b91c1c;}
+*{box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#eef1f7;color:var(--ink);margin:0;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+/* HERO */
+.hero{background:linear-gradient(135deg,#0b1d32,#14243a 55%,#1b2e4d);color:#fff;padding:56px 24px 64px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(231,196,125,.22),transparent 65%);}
+.wrap{max-width:1080px;margin:0 auto;position:relative;z-index:2;}
+.brand{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:34px;}
+.brand img{height:56px;width:auto;}
+.brand .nm{font-weight:600;letter-spacing:.08em;font-size:1.05rem;}
+.brand .nm span{color:var(--gold);}
+.badge{display:inline-block;background:var(--gold);color:var(--bg);font-weight:800;font-size:.72rem;padding:5px 14px;border-radius:24px;letter-spacing:.05em;margin-bottom:20px;}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3.4rem);font-weight:900;line-height:1.08;margin:.2em auto;letter-spacing:-.01em;max-width:900px;}
+.hero h1 .hl{color:var(--gold);}
+.hero p.lead{font-size:clamp(1rem,1.6vw,1.25rem);color:rgba(255,255,255,.85);max-width:760px;margin:20px auto 8px;}
+.hero p.num{margin-top:0;}
+.hero .num b{color:var(--gold);font-size:clamp(1.1rem,2vw,1.4rem);}
+.cta-bar{display:flex;gap:14px;justify-content:center;margin-top:30px;flex-wrap:wrap;}
+.btn{background:var(--gold);color:var(--bg);padding:15px 34px;font-weight:800;font-size:1.05rem;border-radius:12px;display:inline-block;box-shadow:0 8px 24px rgba(231,196,125,.30);transition:transform .12s;}
+.btn:hover{transform:translateY(-2px);}
+.btn2{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);padding:15px 30px;font-weight:700;font-size:1rem;border-radius:12px;}
+/* DOLOR */
+.pain{background:#fff;padding:56px 24px;border-bottom:1px solid var(--line);}
+.pain .sec-t{color:var(--red);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:800;text-align:center;}
+.pain h2{font-size:clamp(1.5rem,3vw,2.3rem);text-align:center;margin:.3em auto .6em;color:var(--bg);max-width:820px;}
+.pain-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1080px;margin:30px auto 0;}
+.pcard{background:#fafcff;border:1px solid var(--line);border-radius:16px;padding:26px;}
+.pcard .ic{width:46px;height:46px;border-radius:12px;background:#fdeaea;color:var(--red);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;margin-bottom:14px;}
+.pcard h3{font-size:1.08rem;color:var(--bg);margin:0 0 8px;}
+.pcard .loss{color:var(--red);font-weight:900;font-size:1.5rem;margin:6px 0;}
+.pcard p{color:#4a5a72;font-size:.9rem;margin:0;}
+/* SOLUCIO */
+.sol{background:linear-gradient(135deg,#0b1d32,#1b2e4d);color:#fff;padding:60px 24px;}
+.sol .sec-t{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:800;text-align:center;}
+.sol h2{font-size:clamp(1.5rem,3vw,2.3rem);text-align:center;margin:.3em auto .4em;max-width:800px;}
+.sol .lead{text-align:center;color:rgba(255,255,255,.85);max-width:760px;margin:0 auto 36px;font-size:1.05rem;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1080px;margin:0 auto;}
+.step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:24px;}
+.step .n{width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:14px;font-size:1.1rem;}
+.step h3{font-size:1rem;margin:0 0 8px;color:#fff;}
+.step p{color:rgba(255,255,255,.75);font-size:.9rem;margin:0;}
+.step .pn{color:var(--gold);font-weight:700;font-size:.85rem;margin-top:10px;display:block;}
+/* ROI */
+.roi{background:#fff;padding:56px 24px;}
+.roi .sec-t{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:800;text-align:center;color:var(--bg);}
+.roi h2{font-size:clamp(1.5rem,3vw,2.2rem);text-align:center;margin:.3em auto .5em;color:var(--bg);}
+.roi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:1080px;margin:24px auto 0;}
+.roi-card{text-align:center;background:#fafcff;border:1px solid var(--line);border-radius:16px;padding:30px 18px;}
+.roi-card .v{font-size:2rem;font-weight:900;color:var(--bg);}
+.roi-card .v span{color:var(--gold);}
+.roi-card .l{color:#5a6a82;font-size:.86rem;margin-top:6px;font-weight:600;}
+.roi-logo{height:12px;}
+/* CTA FINAL */
+.final{background:linear-gradient(135deg,#0b1d32,#1b2e4d);color:#fff;text-align:center;padding:64px 24px;}
+.final h2{font-size:clamp(1.6rem,3.4vw,2.5rem);max-width:800px;margin:.2em auto .5em;}
+.final p{color:rgba(255,255,255,.85);max-width:640px;margin:0 auto 30px;font-size:1.05rem;}
+.final .btn{font-size:1.15rem;padding:17px 40px;}
+footer{background:var(--bg2);color:rgba(255,255,255,.55);text-align:center;padding:22px;font-size:.82rem;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img src="logo.png" alt="SolutionPartner.AI">
+      <div class="nm">AI STRATEGY <span>&amp;</span> AUTOMATION · <span>SolutionPartner</span>.AI</div>
+    </div>
+    <div class="badge">AUTOMATITZACIÓ DE FACTURACIÓ</div>
+    <h1>Cada hora que perds facturant <span class="hl">ets diners que no cobres.</span></h1>
+    <p class="lead">Els teus clients no et paguen tard per delicte. Et paguen tard perquè el teu cobrament depèn de recordatoris manuals que s'acaben oblidant.</p>
+    <p class="num">Encara envies factures a mà? Estadis perdent una mitjana de <b>23 € per cada 1.000 € facturats</b> en cobraments tardans i hores de gestió.</p>
+    <div class="cta-bar">
+      <a class="btn" href="#contracte">Automatiza la facturació →</a>
+      <a class="btn2" href="#roi">Calcula el que perds</a>
+    </div>
+  </div>
+</section>
+
+<!-- DOLOR -->
+<section class="pain" id="dolor">
+  <div class="wrap">
+    <div class="sec-t">El problema amagat</div>
+    <h2>La factura manual et costa 3 vegades: temps, diners i control</h2>
+    <div class="pain-cards">
+      <div class="pcard">
+        <div class="ic">€</div>
+        <h3>Cobraments que es dilaten</h3>
+        <div class="loss">Fins a 30 dies de retard</div>
+        <p>Cada dia que una factura passa sense cobrar, el teu negoci perd liquiditat que no recuperaràs per recuperar. La morositat no és un accident: és la conseqüència de no fer seguiment.</p>
+      </div>
+      <div class="pcard">
+        <div class="ic">⏱</div>
+        <h3>Hores perdudes en gestió</h3>
+        <div class="loss">8-15 h al mes</div>
+        <p>Fer factures, recordar-les, trucar, reconciliar, tornar a recordar. Un empleat atrapat en el paper que podria estar venent-te o atenent clients que et paguen.</p>
+      </div>
+      <div class="pcard">
+        <div class="ic">?!</div>
+        <h3>Factures que es perden</h3>
+        <div class="loss">Fins a un 20%</div>
+        <p>Sense un sistema central, les factures dormen en correus i carpetes. Hi ha clients que mai arriben a pagar perquè mai arriben a veure la factura.</p>
+      </div>
+      <div class="pcard">
+        <div class="ic">📉</div>
+        <h3>Cobraments sense visió clara</h3>
+        <div class="loss">Sense quadre de control</div>
+        <p>Qui deu, quant deu, des de quan? Si no ho pots veure en un sol cop d'ull, no estàs gestionant el negoci: estàs apagant focs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIO -->
+<section class="sol" id="servei">
+  <div class="wrap">
+    <div class="sec-t">La nostra solució</div>
+    <h2>Ho automatitzem tot: tu factures sense tocar res</h2>
+    <p class="lead">Muntem un sistema que emet la factura, la recorda, fa el seguiment de l'impagat i et mostra el quadre de morositat — tot sol, al teu servidor, amb les teves dades.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>La factura es genera sola</h3><p>Quan tanques una feina, una comanda o un servei, el sistema crea la factura automàticament des de l'ordre de treball.</p><span class="pn">0 minuts del teu temps</span></div>
+      <div class="step"><div class="n">2</div><h3>Records automàtics</h3><p>Enviam el recordatori abans del venciment i, si cal, el de l'impagat per correu i WhatsApp. Mai més cap factura oblidada.</p><span class="pn">0 trucades de recordatori</span></div>
+      <div class="step"><div class="n">3</div><h3>Seguiment i quadre de control</h3><p>Veus qui deu, quant deu i des de quan en un dashboard. La morositat deixa de ser un secret.</p><span class="pn">Visió clara sempre</span></div>
+      <div class="step"><div class="n">4</div><h3>El client cobra abans</h3><p>Amb els records automàtics, els teus clients paguen de mitjana dies abans. Cash que torna al teu negoci.</p><span class="pn">Cobra fins a 15 dies abans</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section class="roi" id="roi">
+  <div class="wrap">
+    <div class="sec-t">El retorn</div>
+    <h2>No és un cost. És una inversió que es paga sola.</h2>
+    <div class="roi-grid">
+      <div class="roi-card"><div class="v">30+</div><div class="l">Dies de morositat eliminats de mitjana</div></div>
+      <div class="roi-card"><div class="v">15 <span>h</span></div><div class="l">Al mes que tornes al teu equip</div></div>
+      <div class="roi-card"><div class="v">&gt;3<span>x</span></div><div class="l">El teu retorn en menys de 12 mesos</div></div>
+      <div class="roi-card"><div class="v">100<span>%</span></div><div class="l">De les teves dades al teu servidor</div></div>
+    </div>
+    <p style="text-align:center;color:#4a5a72;font-size:.9rem;max-width:720px;margin:28px auto 0;">Cada mes que no automatitzes, la morositat et segueix costant diners. Cada mes que ho fas, cobres abans i recuperes hores. Els números no enganyen.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final" id="contracte">
+  <div class="wrap">
+    <h2>Atura de perdre diners a la teva facturació.</h2>
+    <p>Et fem una radiografia gratuïta de la teva facturació i t'ensenyem quan pots estalviar. Sense compromís.</p>
+    <div class="cta-bar">
+      <a class="btn" href="#rf">Demanar la radiografia gratuïta →</a>
+      <a class="btn2" href="https://github.io/autodiagnostic-ia">Fes l'autodiagnòstic</a>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD CAPTURE -->
+<section class="pain" id="rf">
+  <div class="wrap" style="max-width:720px;">
+    <div class="sec-t" style="color:var(--bg)">Sense compromís</div>
+    <h2 style="color:var(--bg)">Et calculem el que hi perds</h2>
+    <p style="text-align:center;color:#4a5a72;font-size:.95rem;margin-bottom:24px;">Deixa'ns les teves dades i et tornem amb un informe del cost real de la teva facturació manual.</p>
+    <form onsubmit="return capturaLead(event)">
+      <div class="f"><label>Empresa</label><input class="inp" name="empresa" required></div>
+      <div class="f"><label>Persona de contacte</label><input class="inp" name="nom" required></div>
+      <div class="f"><label>Facturació aproximada a l'any (€)</label><input class="inp" type="number" name="facturacio" placeholder="per exemple 300000" required></div>
+      <div class="f"><label>Correu electrònic</label><input class="inp" type="email" name="email" required></div>
+      <button class="btn" type="submit" style="width:100%;margin-top:8px;">Calcular l'estalvi →</button>
+      <p style="font-size:.78rem;color:#6a7a92;text-align:center;margin-top:12px;">Dades tractades segons RGPD. Res fora del teu abast.</p>
+    </form>
+    <div id="ok" style="display:none;text-align:center;padding:24px;background:#eaf6ea;border:1px solid #2e7d32;border-radius:14px;margin-top:16px;font-weight:600;color:#2e7d32;">✓ Rebut! Et tornem amb el càlcul aviat.</div>
+  </div>
+</section>
+
+<footer>© 2026 SolutionPartner.AI · AI Strategy &amp; Automation · Marquem la diferència important del teu negoci</footer>
+
+<style>
+.f{margin-bottom:14px;}
+.f label{display:block;font-weight:600;font-size:.9rem;color:#23344d;margin-bottom:6px;}
+.inp{width:100%;padding:12px;border:2px solid var(--line);border-radius:9px;font-size:.95rem;font-family:inherit;}
+</style>
+<script>
+async function capturaLead(e){e.preventDefault();
+  const f=e.target, d=Object.fromEntries(new FormData(f).entries());
+  d.origen="landing facturacio"; d.kind="lead";
+  let ok=false;
+  try{const r=await fetch('/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});ok=r.ok;}catch(err){ok=false;}
+  // si el POST al servidor falla (static hosting), obre el correu com a fallback (Web3Forms-style)
+  if(!ok){const m="Landing SolutionPartner - Facturació\n\n"+Object.entries(d).map(([k,v])=>k+": "+v).join("\n");
+    const a=document.createElement('a');a.href="mailto?body="+encodeURIComponent(m);}
+  document.getElementById('ok').style.display='block';
+  f.style.display='none';return false;
+}
+</script>
+</body>
+</html>
